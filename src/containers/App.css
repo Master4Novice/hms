@@ -22,3 +22,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.fourDiv{
+  background-color: antiquewhite;
+}
+.eightDiv{
+  background-color: #DCFAD7;
+}
+.twelveDiv{
+  background-color: #F9D7FA;
+}
