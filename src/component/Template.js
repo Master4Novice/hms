@@ -7,7 +7,7 @@ export default class Template extends Component{
             <div className="container">
             <div className="row">
               <div className="col-md-12 twelveDiv">
-                 <h2>12</h2>
+                 <h2>12 </h2>
               </div>
             </div>
             <div className="row"><hr/></div>
