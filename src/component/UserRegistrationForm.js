@@ -3,6 +3,7 @@ import { Prompt } from 'react-router';
 import { connect } from 'react-redux';
 import { push } from "react-router-redux";
 import '../containers/App';
+import {getData,newData,saveData,updateData,deleteData} from '../actions/userRegistration';
 
 class UserRegistrationForm extends React.Component {
     constructor() {
@@ -30,7 +31,16 @@ class UserRegistrationForm extends React.Component {
             blockTransitions: false,
             status:'Thank you, your application has been submitted.'
         }, () => {
-            this.props.navigateTo('/');
+            this.props.navigateTo('http://localhost:6060/users');
+        });
+    }
+
+    getUserData() {
+        this.setState({
+            blockTransitions: false,
+            status:'Thank you, your application has been submitted.'
+        }, () => {
+            this.props.getData();
         });
     }
 
@@ -46,15 +56,15 @@ class UserRegistrationForm extends React.Component {
                 <div className="row">
                     <div className="col-md-8 eightDiv">
                         <table className="table table-responsive tableUser">
+                            <thead></thead>
+                            <tbody>
                             <tr><td><span>Name</span></td><td><input name="name" type="text" className="form-control" aria-describedby="basic-addon1" value={this.props.name} onChange={this.onChange} /></td></tr>
                             <tr><td><span>User Name</span></td><td><input name="username" type="text" className="form-control" aria-describedby="basic-addon1" value={this.props.username} onChange={this.onChange} /></td></tr>
                             <tr><td><span>Password</span></td><td><input name="password" type="password" className="form-control" aria-describedby="basic-addon1" value={this.props.password} onChange={this.onChange} /></td></tr>
                             <tr><td><span>Email ID</span></td><td><input name="emailId" type="email" className="form-control" aria-describedby="basic-addon1" value={this.props.emailId} onChange={this.onChange} /></td></tr>
                             <tr><td><span>Contact No.</span></td><td><input name="contactNumber" type="number" className="form-control" aria-describedby="basic-addon1" value={this.props.contactNumber} onChange={this.onChange} /></td></tr>
+                            </tbody>
                         </table>
-
-
-                        <div>{this.props.status}</div>
                     </div>
                     <div className="col-md-4 fourDiv">
                         <div className="col-md-1"></div>
@@ -76,7 +86,7 @@ class UserRegistrationForm extends React.Component {
                             </div>
                             <div className="row"><hr/></div>
                             <div className="row">
-                                <input className="btn btn-primary" type="button" defaultValue="Get Data" onClick={this.submit} />
+                                <input className="btn btn-primary" type="button" defaultValue="Get Data" onClick={this.getUserData.bind(this)} />
                             </div>
                         </div>
                         <div className="col-md-1"></div>
@@ -99,11 +109,14 @@ const state = (state, ownProps = {}) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    navigateTo: (location) => {
-        dispatch(push('/'))
+   navigateTo: (location) => {
+        dispatch(push('http://localhost:6060/users'))
     },
     updateForm: (key, value) => {
         dispatch( { type: "REGISTER_FORM_UPDATE", key, value });
+    },
+    getData : () =>{
+        dispatch(getData());
     }
 });
 
