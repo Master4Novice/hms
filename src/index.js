@@ -9,6 +9,8 @@ import thunk from "redux-thunk";
 import logger from 'redux-logger';
 import createHistory from 'history/createBrowserHistory'
 import userRegistrationReducer from "./reducers/userRegistration";
+import AuthReducer from './reducers/auth_reducer';
+
 import './index.css';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
