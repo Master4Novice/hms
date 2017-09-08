@@ -3,7 +3,16 @@ const initialState = {
     username: '',
     password: '',
     emailId: '',
-    contactNumber: ''
+    contactNumber: '',
+    user:{
+        name:'',
+        username:'',
+        password:'',
+        emailId:'',
+        contactNumber:''
+    },
+    users:[],
+    status:''
 };
 
 const userRegistrationReducer = (state = initialState, action) => {
@@ -11,7 +20,13 @@ const userRegistrationReducer = (state = initialState, action) => {
         case "REGISTER_FORM_UPDATE":
             return Object.assign({}, state, { [action.key]: action.value });
         case "GET_USER_DATA":
-            return state;
+            return { ...state, users: action.payload };
+        case "SAVE_USER_DATA":
+            return { ...state, status: action.payload };
+        case "DELETE_USER_DATA":
+            return { ...state, status: action.payload };
+        case "UPDATE_USER_DATA":
+            return { ...state, status: action.payload };
         default:
             return state;
     }

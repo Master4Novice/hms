@@ -20,7 +20,8 @@ const middleware = routerMiddleware(history);
 
 const reducers = combineReducers({
     userRegistration: userRegistrationReducer,
-    router: routerReducer
+    router: routerReducer,
+    auth: AuthReducer
 });
 
 const store = createStore(

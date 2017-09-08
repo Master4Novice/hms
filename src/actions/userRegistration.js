@@ -1,58 +1,83 @@
 import axios from 'axios';
-//import { TEST_ACTION } from './types';
 
-//const API_URL = 'http://localhost:6060/users';
+//const API_URL = 'http://localhost:6060';
 
-//export function testAction() {
-  //  return function(dispatch) {
-   //     axios.get(`${API_URL}`)
-    //        .then(response => {
-      //          dispatch({
-      //              type: TEST_ACTION,
-       //             payload: response.data
-       //         });
-       //     })
-       //     .catch((error) => {
-        //        console.log(error);
-        //    })
-  //  }
+/**
+ * our test action
+ */
+export function getDataAction() {
+    return function(dispatch) {
+        axios.get('http://localhost:6060/users')
+            .then(response => {
+                dispatch({
+                    type: "GET_USER_DATA",
+                    payload: response.data,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+}
+
+//export function updateForm(key, value) {
+//    return function(dispatch){
+ //       type: "REGISTER_FORM_UPDATE", key, value
+ //   };
 //}
 
-export function getData(){
-    (dispatch) =>{
-        dispatch({type:"GET_USER_DATA"})
-        axios.get("http://localhost:6060/users")
-            .then((response) => {
-                dispatch({type:"GET_USER_DATA", payload:response.data})
+export function saveUserDataAction(user){
+    return function(dispatch) {
+        axios({
+            url:'http://localhost:6060/user/',
+            data:user,
+            method:"POST",
+            responseType:"json"
+        }).then(response => {
+                dispatch({
+                    type: "SAVE_USER_DATA",
+                    payload: response.data.message,
+                });
             })
-            .catch((err) =>{
-                dispatch({type:"GET_USER_DATA_REJECTED", payload:err})
+            .catch((error) => {
+                console.log(error);
             })
-    };
+    }
 }
 
-export function saveData(username){
-    return{
-        type: "SAVE_USER_DATA",
-    };
+export function deleteUserDataAction(username){
+    return function(dispatch) {
+        axios({
+            url:'http://localhost:6060/user/'+username,
+            method:"DELETE",
+            responseType:"json"
+        }).then(response => {
+            dispatch({
+                type: "DELETE_USER_DATA",
+                payload: response.data.message,
+            });
+        })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
 }
 
-export function newData(){
-    return{
-        type: "NEW_USER_DATA",
-    };
-}
-
-export function deleteData(username){
-    return{
-        type: "DELETE_USER_DATA",
-        payload: username
-    };
-}
-
-export function updateData(username){
-    return{
-        type: "UPDATE_USER_DATA",
-        payload: username
-    };
+export function updateUserDataAction(user){
+    return function(dispatch) {
+        axios({
+            url:'http://localhost:6060/user/',
+            data:user,
+            method:"PUT",
+            responseType:"json"
+        }).then(response => {
+            dispatch({
+                type: "UPDATE_USER_DATA",
+                payload: response.data.message,
+            });
+        })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
 }

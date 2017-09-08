@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import Home from '../component/Home';
 import Navbar from '../component/Navbar';
 import UserForm from '../component/UserRegistrationForm';
-import Template from '../component/Template';
+//import Template from '../component/Template';
 import dashboard from '../component/dashboard';
 
 class App extends Component {

@@ -22,8 +22,8 @@ class Dashboard extends Component {
     return (
       <div>
         <h4>This is the dashboard</h4>
-        <a onClick={this.handleClickHello.bind(this)}>Knock Knock</a>
-        <h3>{this.props.auth}</h3>
+        <a className="btn btn-danger" onClick={this.handleClickHello.bind(this)}>Knock Knock</a>
+        <h3>{this.props.auth.message}</h3>
       </div>
     );
   }

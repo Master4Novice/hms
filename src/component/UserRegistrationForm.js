@@ -1,22 +1,31 @@
 import React from 'react';
-import { Prompt } from 'react-router';
 import { connect } from 'react-redux';
 import { push } from "react-router-redux";
 import '../containers/App';
-import {getData,newData,saveData,updateData,deleteData} from '../actions/userRegistration';
+import {getDataAction,saveUserDataAction,updateUserDataAction,deleteUserDataAction} from '../actions/userRegistration';
 
 class UserRegistrationForm extends React.Component {
     constructor() {
         super();
         this.state = {
             blockTransitions: false,
+            status:'',
             name: '',
             username: '',
             password: '',
             emailId: '',
-            contactNumber: ''
+            contactNumber: '',
+            user:{
+                name:'',
+                username:'',
+                password:'',
+                emailId:'',
+                contactNumber:''
+            },
+            users:[]
         }
 
+        this.baseState = this.state;
         this.onChange = this.onChange.bind(this);
         this.submit = this.submit.bind(this);
     }
@@ -31,17 +40,73 @@ class UserRegistrationForm extends React.Component {
             blockTransitions: false,
             status:'Thank you, your application has been submitted.'
         }, () => {
-            this.props.navigateTo('http://localhost:6060/users');
+            this.props.navigateTo('/');
         });
     }
 
+    reset(){
+        this.setState(this.baseState);
+    }
+
     getUserData() {
+        this.props.getDataAction();
+
+    }
+
+   // validateField(){
+   //     let name = this.state.name;
+   //     let username = this.state.username;
+   //     let emailId = this.state.emailId;
+   //     let password = this.state.password;
+   //     let contactNumber = this.state.contactNumber;
+
+   //     if(name.length=0 || name == "" || name === null || name == null){
+   //         prompt("Please enter name");
+   //         return false;
+   //     }
+   //     return true;
+   // }
+
+    saveUserData(){
         this.setState({
-            blockTransitions: false,
-            status:'Thank you, your application has been submitted.'
-        }, () => {
-            this.props.getData();
+            ...state,
+            user:{
+                name:this.props.name,
+                username:this.props.username,
+                password:this.props.password,
+                emailId:this.props.emailId,
+                contactNumber:this.props.contactNumber
+            }
         });
+        this.props.saveUserDataAction(this.props.user);
+    }
+
+    updateUserData(){
+        this.setState({
+            ...state,
+            user:{
+                name:this.props.name,
+                username:this.props.username,
+                password:this.props.password,
+                emailId:this.props.emailId,
+                contactNumber:this.props.contactNumber
+            }
+        });
+        this.props.updateUserDataAction(this.props.user);
+    }
+
+    deleteUserData(){
+        this.setState({
+            ...state,
+            user:{
+                name:this.props.name,
+                username:this.props.username,
+                password:this.props.password,
+                emailId:this.props.emailId,
+                contactNumber:this.props.contactNumber
+            }
+        });
+        this.props.deleteUserDataAction(this.props.username);
     }
 
     render() {
@@ -58,31 +123,32 @@ class UserRegistrationForm extends React.Component {
                         <table className="table table-responsive tableUser">
                             <thead></thead>
                             <tbody>
-                            <tr><td><span>Name</span></td><td><input name="name" type="text" className="form-control" aria-describedby="basic-addon1" value={this.props.name} onChange={this.onChange} /></td></tr>
+                            <tr><td><span>Name</span></td><td><input name="name" type="text" className="form-control" aria-describedby="basic-addon1" value={this.props.name} onChange={this.onChange}/></td></tr>
                             <tr><td><span>User Name</span></td><td><input name="username" type="text" className="form-control" aria-describedby="basic-addon1" value={this.props.username} onChange={this.onChange} /></td></tr>
                             <tr><td><span>Password</span></td><td><input name="password" type="password" className="form-control" aria-describedby="basic-addon1" value={this.props.password} onChange={this.onChange} /></td></tr>
                             <tr><td><span>Email ID</span></td><td><input name="emailId" type="email" className="form-control" aria-describedby="basic-addon1" value={this.props.emailId} onChange={this.onChange} /></td></tr>
                             <tr><td><span>Contact No.</span></td><td><input name="contactNumber" type="number" className="form-control" aria-describedby="basic-addon1" value={this.props.contactNumber} onChange={this.onChange} /></td></tr>
                             </tbody>
                         </table>
+                        <div className="text-danger">{this.props.status}</div>
                     </div>
                     <div className="col-md-4 fourDiv">
                         <div className="col-md-1"></div>
                         <div className="col-md-2">
                             <div className="row">
-                                <input className="btn btn-primary" type="button" defaultValue="New" onClick={this.submit} />
+                                <input className="btn btn-primary" type="button" defaultValue="New" onClick={this.reset.bind(this)}/>
                             </div>
                             <div className="row"><hr/></div>
                             <div className="row">
-                                <input className="btn btn-primary" type="button" defaultValue="Save" onClick={this.submit} />
+                                <input className="btn btn-primary" type="button" defaultValue="Save" onClick={this.saveUserData.bind(this)} />
                             </div>
                             <div className="row"><hr/></div>
                             <div className="row">
-                                <input className="btn btn-primary" type="button" defaultValue="Delete" onClick={this.submit} />
+                                <input className="btn btn-primary" type="button" defaultValue="Delete" onClick={this.deleteUserData.bind(this)} />
                             </div>
                             <div className="row"><hr/></div>
                             <div className="row">
-                                <input className="btn btn-primary" type="button" defaultValue="Update" onClick={this.submit} />
+                                <input className="btn btn-primary" type="button" defaultValue="Update" onClick={this.updateUserData.bind(this)} />
                             </div>
                             <div className="row"><hr/></div>
                             <div className="row">
@@ -100,23 +166,41 @@ class UserRegistrationForm extends React.Component {
 
 const state = (state, ownProps = {}) => {
     return {
-        name: state.userRegistration.name,
-        username: state.userRegistration.username,
-        password: state.userRegistration.password,
-        emailId: state.userRegistration.emailId,
-        contactNumber: state.userRegistration.contactNumber
+        name:state.userRegistration.name,
+        username:state.userRegistration.username,
+        password:state.userRegistration.password,
+        emailId:state.userRegistration.emailId,
+        contactNumber:state.userRegistration.contactNumber,
+        user:{
+            name:state.userRegistration.name,
+            username:state.userRegistration.username,
+            password:state.userRegistration.password,
+            emailId:state.userRegistration.emailId,
+            contactNumber:state.userRegistration.contactNumber,
+        },
+        status:state.userRegistration.status,
+        users:state.userRegistration.users
     }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
    navigateTo: (location) => {
-        dispatch(push('http://localhost:6060/users'))
+        dispatch(push('/'))
     },
     updateForm: (key, value) => {
         dispatch( { type: "REGISTER_FORM_UPDATE", key, value });
     },
-    getData : () =>{
-        dispatch(getData());
+    getDataAction : () =>{
+        dispatch(getDataAction());
+    },
+    saveUserDataAction : (user) =>{
+        dispatch(saveUserDataAction(user));
+    },
+    updateUserDataAction : (user) =>{
+        dispatch(updateUserDataAction(user));
+    },
+    deleteUserDataAction : (username) =>{
+        dispatch(deleteUserDataAction(username));
     }
 });
 
