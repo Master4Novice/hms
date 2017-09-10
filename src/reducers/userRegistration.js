@@ -27,6 +27,8 @@ const userRegistrationReducer = (state = initialState, action) => {
             return { ...state, status: action.payload };
         case "UPDATE_USER_DATA":
             return { ...state, status: action.payload };
+        case "NEW_USER_DATA":
+            return state;    
         default:
             return state;
     }

@@ -10,7 +10,10 @@ let Navbar = (props) => (
          <a className="navbar-brand" to="/" onClick={props.navigateTo.bind(this, '/')}>Hospital Management System</a>
          <div className="collapse navbar-collapse" id="navbarNavDropdown">
          <ul className="navbar-nav">
-            <li className="nav-item active dropdown">
+            <li className="nav-item active">
+                <a className="nav-link" to="/" onClick={props.navigateTo.bind(this, '/')}>Home</a>
+            </li>
+            <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Master
                 </a>

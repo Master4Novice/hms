@@ -81,3 +81,12 @@ export function updateUserDataAction(user){
             })
     }
 }
+
+export function newUserDataAction(){
+    return function(dispatch) {
+        dispatch({
+            type: "NEW_USER_DATA",
+            payload: undefined,
+        }); 
+    }   
+}
