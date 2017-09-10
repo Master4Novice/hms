@@ -18,7 +18,12 @@ export default class ModalComopnent extends Component {
       return (
         <div>
           <p>this is my modal</p>
-          
+          <table>
+               <tbody>
+                  {this.state.users.map((user, i) => <TableRow key = {i} 
+                     data = {user} />)}
+               </tbody>
+            </table>
           <button type="button" onClick={this.removeThisModal.bind(this)}>close this modal</button>
         </div>
       );
@@ -29,9 +34,9 @@ export default class ModalComopnent extends Component {
     render() {
        return (
           <tr>
-             <td>{this.props.data.id}</td>
+             <td>{this.props.data.username}</td>
              <td>{this.props.data.name}</td>
-             <td>{this.props.data.age}</td>
+             <td>{this.props.data.emailId}</td>
           </tr>
        );
     }

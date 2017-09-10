@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { push } from "react-router-redux";
 import '../containers/App';
-import Confirm from 'react-confirm-bootstrap';
-import {modal} from 'react-redux-modal';
-import ModalComponent  from './ModalComponent';
+//import Confirm from 'react-confirm-bootstrap';
+//import {modal} from 'react-redux-modal';
+//import ModalComponent  from './ModalComponent';
 import {getDataAction,saveUserDataAction,updateUserDataAction,deleteUserDataAction,newUserDataAction} from '../actions/userRegistration';
 
 class UserRegistrationForm extends React.Component {
@@ -49,20 +49,15 @@ class UserRegistrationForm extends React.Component {
 
     getUserData() {
         this.props.getDataAction();
-        alert(this.props.users);
-        
-    }
-
-    getModal(data){
-        modal.add(
-            ModalComponent, 
-            {
-                title: 'Record',size: 'large', 
-                closeOnOutsideClick: true , 
-                hideTitleBar: false , 
-                hideCloseButton: false,
-                users: data          
-        });
+ //       modal.add(
+ //           ModalComponent, 
+ //           {
+ //               title: 'Record',size: 'large', 
+ //               closeOnOutsideClick: true , 
+ //               hideTitleBar: false , 
+ //               hideCloseButton: false,
+ //               users: this.props.users,          
+ //       });
     }
 
    // validateField(){
@@ -166,12 +161,33 @@ class UserRegistrationForm extends React.Component {
                                                     <tr><td><input className="btn btn-outline-info btn-block" type="button" defaultValue="Get Data" onClick={this.getUserData.bind(this)} /></td></tr>
                                                 </tbody>
                                             </table> 
-                                      </div>
+                                      </div>                                     
                                     </div>
                                 </span>
                           </div>
                        </div>
                    </div>
+                   <div className="col-md-12">
+                     <div className="text-center">
+                        <div className="card">
+                             <div className="card-block">
+                                 
+                                   <table className="table table-responsive table-striped table-bordered">
+                                          <thead className="thead-inverse">
+                                              <tr>
+                                                  <th>Title 1</th><th>Title 2</th><th>Title 3</th><th>Title 4</th>
+                                              </tr>    
+                                          </thead>    
+                                          <tbody>
+                                               {this.props.users.map((user, i) => <TableRow key = {i} data = {user} />)}
+                                               <tr><td className="table-active" colSpan="4"><input className="btn btn-outline-danger" type="button" defaultValue="Reset" onClick={this.newUserData.bind(this)}/></td></tr>
+                                          </tbody>
+                                     </table>
+                                  
+                             </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>               
             </form>
             </div>
@@ -221,5 +237,18 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
         dispatch(newUserDataAction());
     }
 });
+
+class TableRow extends React.Component {
+    render() {
+       return (
+          <tr>
+             <td>{this.props.data.username}</td>
+             <td>{this.props.data.name}</td>
+             <td>{this.props.data.emailId}</td>
+             <td>{this.props.data.contactNumber}</td>
+          </tr>
+       );
+    }
+ }
 
 export default connect(state, mapDispatchToProps)(UserRegistrationForm);
