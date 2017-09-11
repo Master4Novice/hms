@@ -4,12 +4,17 @@ import {reducer as modalReducer} from 'react-redux-modal'
 
 import userRegistrationReducer from "./userRegistration";
 import AuthReducer from './auth_reducer';
+/**
+ *Rohit Doctor Reducer
+ **/
+import {doctorReducer} from './doctorReducer';
 
 const appReducer = combineReducers({
     userRegistration: userRegistrationReducer,
     router: routerReducer,
     auth: AuthReducer,
-    modals: modalReducer
+    modals: modalReducer,
+    doctor:doctorReducer
 });
 
 const reducers = (state, action) => {
