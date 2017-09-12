@@ -8,13 +8,17 @@ import AuthReducer from './auth_reducer';
  *Rohit Doctor Reducer
  **/
 import {doctorReducer} from './doctorReducer';
+/**Bhabani Reducer
+ * */
+import patientReducer from '../reducers/patientRegistration-reducer';
 
 const appReducer = combineReducers({
     userRegistration: userRegistrationReducer,
     router: routerReducer,
     auth: AuthReducer,
     modals: modalReducer,
-    doctor:doctorReducer
+    doctor:doctorReducer,
+    patients:patientReducer
 });
 
 const reducers = (state, action) => {

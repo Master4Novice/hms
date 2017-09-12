@@ -281,6 +281,10 @@ const mapDispatchToProps=(dispatch)=>{
              axios.get("http://localhost:6060/getdata")
              .then((response)=>{
                  console.log(response.data);
+
+
+
+
                  dispatch({
                     type:"GET_RECORD",
                     payload:{doctorRecord:response.data}
