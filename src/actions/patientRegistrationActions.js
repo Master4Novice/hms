@@ -1,5 +1,5 @@
 import axios from "axios";
-import querystring from "querystring";
+//import querystring from "querystring";
 
 export function fetchPatient(){
 
@@ -126,17 +126,17 @@ export function savePatient(patientId,name,fatherName,address,contactNo,emailId,
 export function deletePatient(id){
     return function(dispatch){
 
-        const config = {
-            method: 'get',
-            url: 'http://localhost:6060/rest/deletepatient',
-            data:{
-                'Id':id
-            }
+        //const config = {
+        //    method: 'get',
+        //    url: 'http://localhost:6060/rest/deletepatient',
+         //   data:{
+         //       'Id':id
+         //   }
             /* headers: {
              'Access-Control-Allow-Origin': '*',
              'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept'
              }*/
-        };
+       // };
 
         axios.get('http://localhost:6060/rest/deletepatient?Id=' + id)
             .then((response) => {

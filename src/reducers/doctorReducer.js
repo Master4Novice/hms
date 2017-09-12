@@ -14,7 +14,10 @@ export const doctorReducer=(state={},action)=>{
         case "UPDATE_RECORD":
                state=action.payload;
                break;
+               default:break;
+
         }
+
     
         return state;
 }

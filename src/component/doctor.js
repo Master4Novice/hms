@@ -5,12 +5,7 @@ import DisplayRecord from './displayRecord';
 //import './doctor.css';
  
  class Doctor extends React.Component{
-	    constructor(){
-	      super();
-         // this.initComponents();
-          
-         
-	    }
+
 	    initComponents(){
            
            return (
@@ -97,7 +92,7 @@ import DisplayRecord from './displayRecord';
                                      <div className="card-block">
                                          {
 
-                                             this.props.doctor.doctorRecord!=undefined?
+                                             this.props.doctor.doctorRecord!==undefined?
                                                  <div>
                                                      <h1>below is fetched record:</h1>
                                                      <table className="table table-responsive table-striped table-bordered">
@@ -167,58 +162,58 @@ import DisplayRecord from './displayRecord';
                return;
             }
             //make a API call to save data
-             let jsonstr=JSON.stringify(jsonReq);
+             //let jsonstr=JSON.stringify(jsonReq);
              this.props.btnSaveActionPerformed(jsonReq,this);
              
         }
         validate(){
            
-            if((!this.refs.id.value)||(this.refs.id.value==""))
+            if((!this.refs.id.value)||(this.refs.id.value===""))
                 {
                     alert('Id is mandatory');
                     return false;
                 }
-            if((!this.refs.name.value)||(this.refs.name.value=="")){
+            if((!this.refs.name.value)||(this.refs.name.value==="")){
                 alert('Name is mandatory');
                 return false;
             }
-            if((!this.refs.fatherName.value)||(this.refs.fatherName.value=="")){
+            if((!this.refs.fatherName.value)||(this.refs.fatherName.value==="")){
                 alert('FatherName is mandatory');
                 return false;
             }
-            if((!this.refs.address.value)||(this.refs.address.value=="")){
+            if((!this.refs.address.value)||(this.refs.address.value==="")){
                 alert('Address is mandatory');
                 return false;
             }
-            if((!this.refs.contactNo.value)||(this.refs.contactNo.value=="")){
+            if((!this.refs.contactNo.value)||(this.refs.contactNo.value==="")){
                 alert('ContactNo is mandatory');
                 return false;
             }
-            if(this.refs.contactNo.value.length!=10){
+            if(this.refs.contactNo.value.length!==10){
                alert('Contact number not valid! Enter 10 digit');
                return false;
             }
-            if((!this.refs.email.value)||(this.refs.email.value=="")){
+            if((!this.refs.email.value)||(this.refs.email.value==="")){
                 alert('Email is mandatory');
                 return false;
             }
-            if((!this.refs.qualification.value)||(this.refs.qualification.value=="")){
+            if((!this.refs.qualification.value)||(this.refs.qualification.value==="")){
                 alert('Qualification is mandatory');
                 return false;
             }
-            if((!this.refs.specialization.value)||(this.refs.specialization.value=="")){
+            if((!this.refs.specialization.value)||(this.refs.specialization.value==="")){
                 alert('Specialization is mandatory');
                 return false;
             }
-            if((!this.refs.gender.value)||(this.refs.gender.value=="")){
+            if((!this.refs.gender.value)||(this.refs.gender.value==="")){
                 alert('Gender is mandatory');
                 return false;
             }
-            if((!this.refs.bloodGroup.value)||(this.refs.bloodGroup.value=="")){
+            if((!this.refs.bloodGroup.value)||(this.refs.bloodGroup.value==="")){
                 alert('BloodGroup is mandatory');
                 return false;
             }
-            if((!this.refs.doj.value)||(this.refs.doj.value=="")){
+            if((!this.refs.doj.value)||(this.refs.doj.value==="")){
                 alert('DOJ is mandatory');
                 return false;
             }
@@ -298,7 +293,7 @@ const mapDispatchToProps=(dispatch)=>{
         },
         btnSaveActionPerformed:(jsonReq,thisRef)=>{
             console.log("new record saving");
-            let jsonstr=JSON.stringify(jsonReq);
+            //let jsonstr=JSON.stringify(jsonReq);
            // const config = { headers: { 'Content-Type': 'multipart/form-data'} };
             
             axios.post('http://localhost:6060/save',jsonReq,{headers: {
@@ -351,7 +346,7 @@ const mapDispatchToProps=(dispatch)=>{
         },
         btnUpdateActionPerformed:(jsonReq,thisRef)=>{
             console.log("record has been updated: "+jsonReq);
-            let jsonstr=JSON.stringify(jsonReq);
+            //let jsonstr=JSON.stringify(jsonReq);
             
             axios.post('http://localhost:6060/update',jsonReq,{headers: {
                 "Content-Type": "application/json"}

@@ -7,10 +7,6 @@ import {fetchPatient,savePatient,updatePatient,deletePatient} from "../actions/p
 
 class PatientRegistration extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render(){
         this.initComponents()
         return <div>
