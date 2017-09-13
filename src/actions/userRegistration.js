@@ -3,8 +3,6 @@ import {modal} from 'react-redux-modal';
 import UserDataComponent from '../component/UserDataComponent';
 import AlertBox from '../component/AlertBox';
 
-//const API_URL = 'http://localhost:6060';
-
 /**
  * our test action
  */
@@ -28,12 +26,6 @@ export function getDataAction() {
             })
     }
 }
-
-//export function updateForm(key, value) {
-//    return function(dispatch){
- //       type: "REGISTER_FORM_UPDATE", key, value
- //   };
-//}
 
 export function saveUserDataAction(user){
     return function(dispatch) {
@@ -108,7 +100,7 @@ export function loadModal(users) {
     modal.add(
         UserDataComponent,
         {
-            title: 'User Records',size: 'medium',
+            title: 'User Records',size: 'large',
             closeOnOutsideClick: true ,
             hideTitleBar: false ,
             hideCloseButton: false,
