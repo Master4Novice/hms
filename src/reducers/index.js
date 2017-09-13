@@ -22,7 +22,7 @@ const appReducer = combineReducers({
 });
 
 const reducers = (state, action) => {
-    if (action.type === 'NEW_USER_DATA'){
+      if (action.type === 'NEW_USER_DATA'){
         state = undefined
       }
     return appReducer(state, action)

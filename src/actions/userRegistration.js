@@ -1,4 +1,7 @@
 import axios from 'axios';
+import {modal} from 'react-redux-modal';
+import UserDataComponent from '../component/UserDataComponent';
+import AlertBox from '../component/AlertBox';
 
 //const API_URL = 'http://localhost:6060';
 
@@ -13,6 +16,7 @@ export function getDataAction() {
                     type: "GET_USER_DATA",
                     payload: response.data,
                 });
+                dispatch({type:loadModal(response.data)});
             })
             .catch((error) => {
                 console.log(error);
@@ -38,6 +42,7 @@ export function saveUserDataAction(user){
                     type: "SAVE_USER_DATA",
                     payload: response.data.message,
                 });
+                dispatch({type:loadAlert(response.data.message)});
             })
             .catch((error) => {
                 console.log(error);
@@ -56,6 +61,7 @@ export function deleteUserDataAction(username){
                 type: "DELETE_USER_DATA",
                 payload: response.data.message,
             });
+            dispatch({type:loadAlert(response.data.message)});
         })
             .catch((error) => {
                 console.log(error);
@@ -75,6 +81,7 @@ export function updateUserDataAction(user){
                 type: "UPDATE_USER_DATA",
                 payload: response.data.message,
             });
+            dispatch({type:loadAlert(response.data.message)});
         })
             .catch((error) => {
                 console.log(error);
@@ -87,6 +94,33 @@ export function newUserDataAction(){
         dispatch({
             type: "NEW_USER_DATA",
             payload: undefined,
-        }); 
+        });
+        dispatch({type:loadAlert("Ready to register new user")});
     }   
+}
+
+export function loadModal(users) {
+    modal.add(
+        UserDataComponent,
+        {
+            title: 'User Records',size: 'medium',
+            closeOnOutsideClick: true ,
+            hideTitleBar: false ,
+            hideCloseButton: false,
+            users:users,
+        });
+    return "ADD_MODAL";
+}
+
+export function loadAlert(message) {
+    modal.add(
+        AlertBox,
+        {
+            title: 'Information',size: 'small',
+            closeOnOutsideClick: true ,
+            hideTitleBar: false ,
+            hideCloseButton: false,
+            message:message,
+        });
+    return "DISPLAY_ALERT_STATUS";
 }
