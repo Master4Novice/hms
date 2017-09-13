@@ -16,7 +16,12 @@ export function getDataAction() {
                     type: "GET_USER_DATA",
                     payload: response.data,
                 });
-                dispatch({type:loadModal(response.data)});
+                if(response.data===""){
+                    dispatch({type:loadAlert("No user exist in our record")});
+                }
+                else{
+                    dispatch({type:loadModal(response.data)});
+                }
             })
             .catch((error) => {
                 console.log(error);
