@@ -30,7 +30,7 @@ class UserRegistrationForm extends React.Component {
             users:[]
         }
 
-        this.onChange = this.onChange.bind(this);
+        this.onChange = this.onChange.bind(this); 
     }
 
     onChange(e) {
