@@ -3,7 +3,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import Navbar from '../component/Navbar';
+import Navbar from '../component/header/Navbar';
+import Home from '../component/Home';
 
 import './App.css';
 
@@ -28,7 +29,7 @@ function App() {
       <Grid container spacing={3}>
           <Navbar />
           <Grid item xs={12}>
-            hi
+            <Home />
           </Grid>
       </Grid>
     </div>
