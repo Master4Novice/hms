@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import Navbar from '../component/header/Navbar';
-import Home from '../component/Home';
+import Home from '../component/home/Home';
 
 import './App.css';
 
