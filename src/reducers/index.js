@@ -1,6 +1,4 @@
 import { combineReducers } from "redux";
-import { routerReducer } from "react-router-redux";
-import {reducer as modalReducer} from 'react-redux-modal'
 
 import userRegistrationReducer from "./userRegistration";
 import AuthReducer from './auth_reducer';
@@ -14,9 +12,7 @@ import patientReducer from '../reducers/patientRegistration-reducer';
 
 const appReducer = combineReducers({
     userRegistration: userRegistrationReducer,
-    router: routerReducer,
     auth: AuthReducer,
-    modals: modalReducer,
     doctor:doctorReducer,
     patients:patientReducer
 });
