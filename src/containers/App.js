@@ -14,7 +14,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 //import { Route } from 'react-router-dom';
-//import Home from '../component/Home';
 //import UserForm from '../component/UserRegistrationForm';
 //import Template from '../component/Template';
 //import dashboard from '../component/dashboard';
