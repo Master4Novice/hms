@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import Navbar from '../component/header/Navbar';
-import Home from '../component/home/Home';
+import TabsAndContent from '../component/tabs/TabsAndContent';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,7 +32,13 @@ function App() {
       <ThemeProvider theme={theme}>
           <Navbar />
           <Grid item xs={12} classes={classes.mainContents}>
-            <Home />
+            <Grid container spacing={3} >
+              <Grid item xs={1} />
+              <Grid item xs={10}>
+                <TabsAndContent />
+              </Grid>
+              <Grid item xs={1} />
+            </Grid>
           </Grid>
       </ThemeProvider>    
       </Grid>
