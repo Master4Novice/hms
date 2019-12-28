@@ -1,8 +1,13 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import ReplayIcon from '@material-ui/icons/Replay';
 
 import { Form, Field } from 'react-final-form';
+ 
+import { HMTextField } from '../../wrappers';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -10,6 +15,8 @@ const onSubmit = async values => {
   await sleep(300)
   alert(JSON.stringify(values, 0, 2));
 };
+
+const required = value => (value ? undefined : 'Required');
 
 class UserRegistrationForm extends React.Component {
     constructor() {
@@ -100,68 +107,86 @@ class UserRegistrationForm extends React.Component {
         return (
             <Form 
               onSubmit={onSubmit}
-              render={({ handleSubmit }) => (
+              render={({ handleSubmit, form, submitting, pristine }) => (
                    <div>
-                       <form>
+                       <form onSubmit={handleSubmit}>
                             <Grid container spacing={3} >
                                 <Grid item xs={12} >
                                     <Grid container spacing={3} >
-                                        <Grid item xs={4} >
-                                            <label>Name</label>
+                                        <Grid item xs={3} >
                                             <Field
                                               name="name"
-                                              component="input"
+                                              label="Name"
+                                              component={HMTextField}
                                               type="text"
+                                              validate={required}
                                             />
                                         </Grid>
-                                    </Grid>
-                                    <Grid container spacing={3} >
-                                        <Grid item xs={4} >
-                                            <label>User Name</label>
+                                        <Grid item xs={3} >
                                             <Field
-                                              name="username"
-                                              component="input"
+                                              name="emailId"
+                                              label="Email ID"
+                                              component={HMTextField}
                                               type="text"
+                                              validate={required}
                                             />
                                         </Grid>
-                                    </Grid>
-                                    <Grid container spacing={3} >
-                                        <Grid item xs={2} >
-                                            <label>Password</label>
-                                            <Field
-                                              name="password"
-                                              component="input"
-                                              type="password"
-                                            />
-                                        </Grid>
-                                    </Grid>
-                                    <Grid container spacing={3} >
-                                        <Grid item xs={2} >
-                                            Email ID
-                                        </Grid>
-                                    </Grid>
-                                    <Grid container spacing={3} >
-                                        <Grid item xs={2} >
-                                            <label>Contact No</label>
+                                        <Grid item xs={3} >
                                             <Field
                                               name="contactNumber"
-                                              component="input"
+                                              label="Contact Number"
+                                              component={HMTextField}
                                               type="number"
+                                              validate={required}
                                             />
+                                        </Grid>
+                                    </Grid>                               
+                                    <Grid container spacing={3} >
+                                        <Grid item xs={3} >
+                                            <Field
+                                              name="username"
+                                              label="User Name"
+                                              component={HMTextField}
+                                              type="text"
+                                              validate={required}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={3} >
+                                            <Field
+                                              name="password"
+                                              label="Password"
+                                              component={HMTextField}
+                                              type="password"
+                                              validate={required}
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container spacing={3} >
+                                        <Grid item xs={1} >
+                                            <Button
+                                                variant="contained"
+                                                color="primary"
+                                                type="submit" 
+                                                disabled={submitting}
+                                                endIcon={<AddCircleIcon />}
+                                            >
+                                                Add
+                                            </Button>
+                                        </Grid>
+                                        <Grid item xs={1} >
+                                            <Button
+                                                variant="contained"
+                                                color="primary"
+                                                onClick={form.reset}
+                                                disabled={submitting || pristine}
+                                                endIcon={<ReplayIcon />}
+                                            >
+                                                Reset
+                                            </Button>
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                            </Grid>                                                             
-                            <table className="table table-responsive">
-                                <thead></thead>
-                                <tbody>
-                                    <tr><td><input className="btn btn-outline-info btn-block" type="button" defaultValue="New" onClick={this.newUserData.bind(this)}/></td></tr>
-                                    <tr><td><input className="btn btn-outline-info btn-block" type="submit" defaultValue="Save" /></td></tr>
-                                    <tr><td><input className="btn btn-outline-info btn-block" type="button" defaultValue="Delete" onClick={this.deleteUserData.bind(this)} /></td></tr>
-                                    <tr><td><input className="btn btn-outline-info btn-block" type="button" defaultValue="Update" onClick={this.updateUserData.bind(this)} /></td></tr>
-                                    <tr><td><input className="btn btn-outline-info btn-block" type="button" defaultValue="Get Data" onClick={this.getUserData.bind(this)} /></td></tr>
-                                </tbody>
-                            </table>                                   
+                            </Grid>                                                                                                
                         </form>
                     </div>
                 )}

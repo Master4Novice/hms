@@ -6,8 +6,8 @@ import { purple } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import Navbar from '../component/header/Navbar';
-import TabsAndContent from '../component/tabs/TabsAndContent';
+import Navbar from '../components/header/Navbar';
+import TabsAndContent from '../components/tabs/TabsAndContent';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,7 +31,7 @@ function App() {
       <Grid container spacing={3}>
       <ThemeProvider theme={theme}>
           <Navbar />
-          <Grid item xs={12} classes={classes.mainContents}>
+          <Grid item xs={12} className={classes.mainContents}>
             <Grid container spacing={3} >
               <Grid item xs={1} />
               <Grid item xs={10}>
