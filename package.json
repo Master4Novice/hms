@@ -1,25 +1,31 @@
 {
   "name": "hms-ui",
-  "version": "2.0.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.6.0",
-    "@material-ui/icons": "^4.5.1",
-    "final-form": "^4.18.6",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-final-form": "^6.3.3",
-    "react-scripts": "^3.3.0"
-  },
+  "version": "0.0.3",
+  "description": "Hospital Manegement System",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NHAAHNA/hms.git"
   },
+  "keywords": [
+    "hospital",
+    "management",
+    "system",
+    "react",
+    "redux",
+    "material-ui"
+  ],
+  "author": "Abhinav Dwivedi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NHAAHNA/hms/issues"
+  },
+  "homepage": "https://github.com/NHAAHNA/hms#readme",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -31,5 +37,35 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.10.0",
+    "clsx": "^1.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.2",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 import React from 'react';
 import PropTypes from 'prop-types';
 import HomeIcon from '@material-ui/icons/Home';
@@ -17,80 +18,80 @@ import WorkIcon from '@material-ui/icons/Work';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 import HelpIcon from '@material-ui/icons/Help';
 
-function IconList({index}) {
-  if (index === 0) { 
+function IconList({ index }) {
+  if (index === 0) {
     return (
-        <HomeIcon />
+      <HomeIcon />
     );
-  } else if (index === 1) { 
+  } else if (index === 1) {
     return (
-        <GroupIcon />
+      <GroupIcon />
     );
-  } else if (index === 2) { 
+  } else if (index === 2) {
     return (
-        <GroupIcon />
+      <GroupIcon />
     );
-  } else if (index === 3) { 
+  } else if (index === 3) {
     return (
-        <SingleBedIcon />
+      <SingleBedIcon />
     );
-  } else if (index === 4) { 
+  } else if (index === 4) {
     return (
-        <KingBedIcon />
+      <KingBedIcon />
     );
-  } else if (index === 5) { 
+  } else if (index === 5) {
     return (
-        <FaceIcon />
+      <FaceIcon />
     );
-  } else if (index === 6) { 
+  } else if (index === 6) {
     return (
-        <HowToRegIcon />
+      <HowToRegIcon />
     );
-  } else if (index === 7) { 
+  } else if (index === 7) {
     return (
-        <LockIcon />
+      <LockIcon />
     );
-  } else if (index === 8) { 
+  } else if (index === 8) {
     return (
-        <ListAltIcon />
+      <ListAltIcon />
     );
-  } else if (index === 9) { 
+  } else if (index === 9) {
     return (
-        <PersonAddIcon />
+      <PersonAddIcon />
     );
-  } else if (index === 10) { 
+  } else if (index === 10) {
     return (
-        <AssignmentIndIcon />
+      <AssignmentIndIcon />
     );
-  }  else if (index === 11) { 
+  } else if (index === 11) {
     return (
-        <KeyboardArrowRightIcon />
+      <KeyboardArrowRightIcon />
     );
-  } else if (index === 12) { 
+  } else if (index === 12) {
     return (
-        <KeyboardArrowLeftIcon />
+      <KeyboardArrowLeftIcon />
     );
-  } else if (index === 13) { 
+  } else if (index === 13) {
     return (
-        <WorkIcon />
+      <WorkIcon />
     );
-  } else if (index === 14) { 
+  } else if (index === 14) {
     return (
-        <ReceiptIcon />
+      <ReceiptIcon />
     );
-  } else if (index === 15) { 
+  } else if (index === 15) {
     return (
-        <HelpIcon />
+      <HelpIcon />
     );
   } else {
     return (
-        <LocalHospitalIcon />
+      <LocalHospitalIcon />
     );
   }
 }
 
 IconList.propTypes = {
-    index: PropTypes.number
+  index: PropTypes.number,
 };
 
 export default IconList;

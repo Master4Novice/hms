@@ -10,7 +10,7 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
 import MenuItems from '../menu/MenuItems';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100%',
@@ -23,15 +23,15 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   drawer: {
-    backgroundColor: purple
-  }
+    backgroundColor: purple,
+  },
 }));
 
 export default function Navbar() {
   const classes = useStyles();
-  const [state, setState] = useState({left: false});
+  const [state, setState] = useState({ left: false });
 
-  const toggleDrawer = (side, open) => event => {
+  const toggleDrawer = (side, open) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
