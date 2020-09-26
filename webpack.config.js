@@ -19,14 +19,14 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
-    path: path.resolve(__dirname, 'bahi-ui/'),
+    path: path.resolve(__dirname, 'hms/'),
     publicPath: '/hms/',
     filename: 'hms-bundle.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: 9000,
-    publicPath: 'http://localhost:3000/hms/',
+    publicPath: 'http://localhost:9000/hms/',
     hotOnly: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
