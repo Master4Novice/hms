@@ -1,0 +1,7 @@
+{"properties": [
+  {
+    "name": "dataLocation",
+    "type": "java.lang.String",
+    "description": "Location for reading or writting data in JSON files"
+  }
+]}

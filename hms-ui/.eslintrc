@@ -1,0 +1,18 @@
+{
+    "extends": ["airbnb"],
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "commonjs": true
+    },
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "quotes": ["error", "single"],
+      "linebreak-style":"off",
+      "react/jsx-props-no-spreading": "off",
+      "react/require-default-props": "off",
+      "comma-dangle":"off",
+      "no-unused-vars": ["error", { "vars": "local" }]
+    }
+  }

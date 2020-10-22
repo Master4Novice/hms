@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>hms-integrated</artifactId>
+	<packaging>jar</packaging>
+
+    <parent>
+	  <groupId>com.hospital.management.system</groupId>
+	  <artifactId>hms</artifactId>
+      <version>2.0.0</version>
+	  <relativePath>../pom.xml</relativePath>
+	</parent>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.hospital.management.system</groupId>
+			<artifactId>hms-service</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hospital.management.system</groupId>
+			<artifactId>hms-ui</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+				  <mainClass>com.hospital.management.system.HospitalManagementSystemServiceApplication</mainClass>
+				</configuration>
+				<executions>
+				  <execution>
+				    <goals>
+					  <goal>build-info</goal>
+					</goals>
+				  </execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
