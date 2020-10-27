@@ -1,10 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ChunksWebpackPlugin = require('chunks-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main/index.js',
   mode: 'development',
   module: {
     rules: [
@@ -24,22 +25,29 @@ module.exports = {
 	extensions: ['*', '.js', '.jsx'] 
   },
   output: {
-    path: path.resolve(__dirname, 'build/'),
+    path: path.resolve(__dirname, 'target/build/'),
     publicPath: '/',
     filename: '[name].[hash].hms-bundle.js',
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name: false
+    }
+  },
   devServer: {
-    contentBase: path.join(__dirname, 'public/'),
+    contentBase: path.join(__dirname, 'src/main/'),
     port: 9000,
-    publicPath: 'http://localhost:9000/hms/',
+    publicPath: 'http://localhost:9000/',
     hotOnly: true,
   },
   plugins: [
 	new webpack.HotModuleReplacementPlugin(),
 	new HtmlWebpackPlugin({
-		template: 'public/index.html',
+		template: 'src/main/index.html',
 		chunksSortMode: 'auto'
-	})
+	}),
+	new ChunksWebpackPlugin()
   ],
   optimization: {
 	minimizer: [
