@@ -1,0 +1,9 @@
+/.idea/
+/hms.iml
+/hms-ui/hms-ui.iml
+/hms-ui/target/
+/hms-ui/node_modules/
+/hms-service/target/
+/hms-service/hms-service.iml
+/hms-integrated/target/
+/hms-integrated/hms-integrated.iml

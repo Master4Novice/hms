@@ -8,7 +8,7 @@
 	<version>2.0.0</version>
 	<packaging>pom</packaging>
 	<name>Hospital Management System</name>
-	<description>Application For Hospital Management System</description>
+	<description>Hospital Management System - Complete End to End Application For Full Stack Developers</description>
 
     <parent>
 	  <groupId>org.springframework.boot</groupId>
@@ -43,6 +43,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.6</version>
 				<executions>
 				  <execution>
 				    <id>prepare-agent</id>
