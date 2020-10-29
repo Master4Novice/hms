@@ -6,6 +6,7 @@
       "jest": true,
       "commonjs": true
     },
+    "parser": "babel-eslint",
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "quotes": ["error", "single"],
@@ -13,6 +14,7 @@
       "react/jsx-props-no-spreading": "off",
       "react/require-default-props": "off",
       "comma-dangle":"off",
-      "no-unused-vars": ["error", { "vars": "local" }]
+      "no-unused-vars": ["error", { "vars": "local" }],
+      "no-nested-ternary": "off"
     }
   }

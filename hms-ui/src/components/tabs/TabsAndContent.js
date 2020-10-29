@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import Home from '../home/Home';
-import UserRegistrationForm from '../users/registration/UserRegistrationForm';
+import UserRegistration from '../users/registration/UserRegistration';
 
 function TabPanel(props) {
   const {
@@ -78,7 +78,7 @@ export default function TabsAndContent() {
         <Home />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <UserRegistrationForm />
+        <UserRegistration />
       </TabPanel>
     </div>
   );
