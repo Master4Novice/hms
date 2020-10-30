@@ -9,7 +9,9 @@ public class UserRegistrationVO extends AuditVO {
 
 	private String userId;
 	private String userPassword;
-	private String userName;
+	private String userFirstName;
+	private String userMiddleName;
+	private String userSurName;
 	private String userEmailId;
 	private String contactNumber;
 	private String userStatus;
