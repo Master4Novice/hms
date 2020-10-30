@@ -1,16 +1,15 @@
 const INITIAL_STATE = {
-  name: '',
-  username: '',
-  password: '',
-  emailId: '',
-  contactNumber: '',
+  dataSaved: null,
+  validUser: null
 };
 
 const userRegistrationReducer = (state = INITIAL_STATE, action) => {
   const { payload } = action;
   switch (action.type) {
-    case 'REGISTER_USER':
-      return { ...state, payload };
+    case 'IS_USER_DATA_SAVED':
+      return { ...state, dataSaved: payload };
+    case 'IS_VALID_USER':
+      return { ...state, validUser: payload };
     default:
       return state;
   }

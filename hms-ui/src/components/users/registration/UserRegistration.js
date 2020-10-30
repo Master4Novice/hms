@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 
 import Grid from '@material-ui/core/Grid';
@@ -8,17 +8,44 @@ import Button from '@material-ui/core/Button';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import ReplayIcon from '@material-ui/icons/Replay';
 import TextField from '@material-ui/core/TextField';
+import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '../../alerts/Alert';
 import PMessage from '../../messages/PMessage';
+import UMessage from '../../messages/UMessage';
+
+import { validateUsername, saveUserDataAction } from '../../../actions';
 
 function UserRegistration() {
   const {
     register, handleSubmit, errors, reset
   } = useForm();
 
+  const dispatch = useDispatch();
+  const { validUser, dataSaved } = useSelector((state) => state.userRegistration);
+
+  const onUserNameChange = (e) => {
+    const { value } = e.target;
+    if (value && value.length >= 8 && value.length <= 16) {
+      dispatch(validateUsername(value));
+    }
+  };
+
   const onSubmit = (data) => {
-    // eslint-disable-next-line no-console
-    console.log(data);
+    dispatch(saveUserDataAction(data));
+  };
+
+  const handleCloseUserWarn = () => {
+    dispatch({
+      type: 'IS_VALID_USER',
+      payload: !validUser,
+    });
+  };
+
+  const handleCloseUserSubmitWarn = () => {
+    dispatch({
+      type: 'IS_USER_DATA_SAVED',
+      payload: !dataSaved,
+    });
   };
 
   return (
@@ -111,8 +138,9 @@ function UserRegistration() {
                   fullWidth
                   inputRef={register({
                     required: { value: true, message: 'Username is required' },
-                    pattern: { value: /^[a-zA-Z0-9]+$/, message: 'Invalid Username Taken' }
+                    pattern: { value: /^(?=.*\d)(?=.*[_@.])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/, message: 'Invalid Username Taken' }
                   })}
+                  onChange={(e) => onUserNameChange(e)}
                   helperText={errors?.username?.message}
                 />
               </Grid>
@@ -159,7 +187,30 @@ function UserRegistration() {
             </Grid>
           </Grid>
         </Grid>
-        { errors?.password ? <div style={{ marginTop: '2em' }}><Alert severity="info"><PMessage /></Alert></div> : '' }
+        <Grid container spacing={3}>
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            { errors?.username ? <div style={{ marginTop: '2em' }}><Alert severity="info"><UMessage /></Alert></div> : '' }
+          </Grid>
+          <Grid item xs={3} />
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            { errors?.password ? <div style={{ marginTop: '2em' }}><Alert severity="info"><PMessage /></Alert></div> : '' }
+          </Grid>
+          <Grid item xs={3} />
+        </Grid>
+        { validUser && (
+        <Snackbar open={validUser} autoHideDuration={6000} onClose={handleCloseUserWarn}>
+          <Alert onClose={handleCloseUserWarn} severity="warning">Username Already Taken!</Alert>
+        </Snackbar>
+        ) }
+        { dataSaved && (
+        <Snackbar open={dataSaved} autoHideDuration={6000} onClose={handleCloseUserSubmitWarn}>
+          <Alert onClose={handleCloseUserSubmitWarn} severity="warning">Username Already Taken!</Alert>
+        </Snackbar>
+        ) }
       </form>
     </div>
   );
