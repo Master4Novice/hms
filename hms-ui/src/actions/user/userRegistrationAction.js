@@ -1,6 +1,5 @@
-/* eslint-disable func-names */
-/* eslint-disable no-console */
 import axios from 'axios';
+import { success, info, warning, error } from '../quick-view/quickViewAction';
 
 axios.defaults.headers = { Pragma: 'no-cache' };
 
@@ -13,19 +12,15 @@ export function validateUsername(username) {
     })
       .then((response) => {
         if (response.status === 200) {
-          dispatch({
-            type: 'IS_VALID_USER',
-            payload: true,
-          });
+          dispatch(info(`${username} is already taken`));
         } else {
-          dispatch({
-            type: 'IS_VALID_USER',
-            payload: false,
-          });
+          dispatch(info(`${username} is available`));
         }
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((e) => {
+        // eslint-disable-next-line no-console
+        console.log(e);
+        dispatch(error('Error In Validating Username'));
       });
   };
 }
@@ -50,66 +45,16 @@ export function saveUserDataAction(user) {
     }).then((response) => {
       if (response.status === 200) {
         if (response.data.message === 'User Exist') {
-          dispatch({
-            type: 'IS_USER_DATA_SAVED',
-            payload: false,
-          });
+          dispatch(warning('User Already Exist'));
         } else {
-          dispatch({
-            type: 'IS_USER_DATA_SAVED',
-            payload: true,
-          });
+          dispatch(success('User Registered Successfully'));
         }
       }
     })
-      .catch((error) => {
-        console.log(error);
+      .catch((e) => {
+        // eslint-disable-next-line no-console
+        console.log(e);
+        dispatch(error('Error While Saving Data'));
       });
-  };
-}
-
-export function deleteUserDataAction(username) {
-  return function (dispatch) {
-    axios({
-      url: `http://localhost:6060/user/${username}`,
-      method: 'DELETE',
-      responseType: 'json',
-    }).then((response) => {
-      dispatch({
-        type: 'DELETE_USER_DATA',
-        payload: response.data.message,
-      });
-    })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-}
-
-export function updateUserDataAction(user) {
-  return function (dispatch) {
-    axios({
-      url: 'http://localhost:6060/user/',
-      data: user,
-      method: 'PUT',
-      responseType: 'json',
-    }).then((response) => {
-      dispatch({
-        type: 'UPDATE_USER_DATA',
-        payload: response.data.message,
-      });
-    })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-}
-
-export function newUserDataAction() {
-  return function (dispatch) {
-    dispatch({
-      type: 'NEW_USER_DATA',
-      payload: undefined,
-    });
   };
 }

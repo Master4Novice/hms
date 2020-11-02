@@ -15,6 +15,8 @@
       "react/require-default-props": "off",
       "comma-dangle":"off",
       "no-unused-vars": ["error", { "vars": "local" }],
-      "no-nested-ternary": "off"
+      "no-nested-ternary": "off",
+	  "object-curly-newline": "off",
+	  "func-names": ["error", "never"]
     }
   }

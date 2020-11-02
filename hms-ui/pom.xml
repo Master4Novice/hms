@@ -3,15 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <artifactId>hms-ui</artifactId>
+    <packaging>jar</packaging>
+    <name>Hospital Management System - UI</name>
+    
     <parent>
         <groupId>com.hospital.management.system</groupId>
         <artifactId>hms</artifactId>
         <version>2.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>hms-ui</artifactId>
-    <packaging>jar</packaging>
-    <name>Hospital Management System - UI</name>
 
     <properties>
         <frontend-src-dir>${project.basedir}</frontend-src-dir>

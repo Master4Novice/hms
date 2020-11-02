@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 
 import Home from '../home/Home';
 import UserRegistration from '../users/registration/UserRegistration';
+import QuickView from '../quick-view/QuickView';
 
 function TabPanel(props) {
   const {
@@ -80,6 +81,7 @@ export default function TabsAndContent() {
       <TabPanel value={value} index={1}>
         <UserRegistration />
       </TabPanel>
+      <QuickView />
     </div>
   );
 }
