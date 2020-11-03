@@ -9,8 +9,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import ReplayIcon from '@material-ui/icons/Replay';
 import TextField from '@material-ui/core/TextField';
 import Alert from '../../alerts/Alert';
-import PMessage from '../../messages/PMessage';
-import UMessage from '../../messages/UMessage';
+import { PMessage, UMessage } from '../../messages';
 
 import { validateUsername, saveUserDataAction } from '../../../actions';
 
