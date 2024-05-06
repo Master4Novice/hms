@@ -1,6 +1,19 @@
 {
   "name": "hms",
   "version": "2.0.0",
+  "description": "Hospital Management System",
+  "author": {
+    "name": "Abhinav Dwivedi"
+  },
+  "license":"MIT",
+  "keywords": [
+    "hms",
+    "react",
+    "redux"
+  ],
+  "repository": {
+    "url": "https://github.com/Master4Novice/hms.git"
+  },
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
