@@ -1,0 +1,56 @@
+{
+  "name": "hms-service",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/hms-service/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/hms-service",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/hms-service/src/main.ts",
+        "tsConfig": "apps/hms-service/tsconfig.app.json",
+        "assets": ["apps/hms-service/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "hms-service:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "hms-service:build:development"
+        },
+        "production": {
+          "buildTarget": "hms-service:build:production"
+        }
+      }
+    }
+  }
+}

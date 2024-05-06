@@ -1,0 +1,371 @@
+[NX Daemon Server] - 2024-05-06T18:33:24.527Z - Started listening on: /var/folders/w9/ct9gwq8x21q2ff9qfrr7g5540000gn/T/17c00da9fe1058d8c265/d.sock
+[NX Daemon Server] - 2024-05-06T18:33:24.531Z - [WATCHER]: Subscribed to changes within: /Users/dwivabh/project/node/hms (native)
+[NX Daemon Server] - 2024-05-06T18:33:24.537Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:33:24.538Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-06T18:33:24.539Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:33:24.540Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:33:24.757Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:24.757Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:24.758Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:26.577Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 215.300749999471ms
+[NX Daemon Server] - 2024-05-06T18:33:27.433Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:33:27.442Z - Time taken for 'build-project-configs' 2576.645499999635ms
+[NX Daemon Server] - 2024-05-06T18:33:27.445Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:33:27.445Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2893. Response time: 12.
+[NX Daemon Server] - 2024-05-06T18:33:27.453Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:33:27.453Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:33:27.453Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-05-06T18:33:27.455Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-05-06T18:33:27.681Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:33:27.681Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-06T18:33:27.681Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:33:27.682Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:33:27.683Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:27.683Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:27.684Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:27.770Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:33:27.776Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.7137919999659061ms
+[NX Daemon Server] - 2024-05-06T18:33:27.778Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:33:27.778Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 88. Response time: 8.
+[NX Daemon Server] - 2024-05-06T18:33:27.784Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:33:27.785Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:27.785Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:27.785Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:27.856Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:33:27.862Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6779159996658564ms
+[NX Daemon Server] - 2024-05-06T18:33:27.865Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:33:27.865Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 72. Response time: 9.
+[NX Daemon Server] - 2024-05-06T18:33:27.973Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:33:27.975Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:27.975Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:27.975Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:28.045Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:33:28.051Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.7878749994561076ms
+[NX Daemon Server] - 2024-05-06T18:33:28.054Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:33:28.054Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 72. Response time: 9.
+[NX Daemon Server] - 2024-05-06T18:33:28.060Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:33:28.061Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:28.061Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:28.061Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:28.139Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:33:28.145Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6336669996380806ms
+[NX Daemon Server] - 2024-05-06T18:33:28.147Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:33:28.147Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 79. Response time: 8.
+[NX Daemon Server] - 2024-05-06T18:33:58.770Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2024-05-06T18:33:58.770Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-06T18:33:58.873Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:58.873Z - [REQUEST]: package.json
+[NX Daemon Server] - 2024-05-06T18:33:58.873Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:58.947Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.7401250004768372ms
+[NX Daemon Server] - 2024-05-06T18:33:59.775Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:33:59.776Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:59.776Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:59.776Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:59.870Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:33:59.876Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.661209000274539ms
+[NX Daemon Server] - 2024-05-06T18:33:59.878Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:33:59.878Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 95. Response time: 8.
+[NX Daemon Server] - 2024-05-06T18:33:59.885Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:33:59.885Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:33:59.886Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-05-06T18:33:59.887Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-05-06T18:33:59.971Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:33:59.971Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-06T18:33:59.971Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:33:59.972Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:33:59.973Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:33:59.974Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:33:59.974Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:00.045Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:00.051Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6449999995529652ms
+[NX Daemon Server] - 2024-05-06T18:34:00.071Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:00.072Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 73. Response time: 27.
+[NX Daemon Server] - 2024-05-06T18:34:00.078Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:00.079Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:00.079Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:00.079Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:00.183Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:00.191Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.7470410000532866ms
+[NX Daemon Server] - 2024-05-06T18:34:00.194Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:00.194Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 105. Response time: 11.
+[NX Daemon Server] - 2024-05-06T18:34:00.301Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:00.303Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:00.303Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:00.303Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:00.373Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:00.380Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.700250000692904ms
+[NX Daemon Server] - 2024-05-06T18:34:00.385Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:00.385Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 72. Response time: 12.
+[NX Daemon Server] - 2024-05-06T18:34:00.394Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:00.395Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:00.395Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:00.395Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:00.466Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:00.472Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6376250004395843ms
+[NX Daemon Server] - 2024-05-06T18:34:00.474Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:00.474Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 72. Response time: 8.
+[NX Daemon Server] - 2024-05-06T18:34:34.159Z - [WATCHER]: public was deleted
+[NX Daemon Server] - 2024-05-06T18:34:34.160Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-06T18:34:34.263Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:34.263Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:34.263Z - [REQUEST]: public
+[NX Daemon Server] - 2024-05-06T18:34:34.326Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.7472090004011989ms
+[NX Daemon Server] - 2024-05-06T18:34:35.167Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:35.169Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:35.169Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.169Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.242Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:35.249Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6863749995827675ms
+[NX Daemon Server] - 2024-05-06T18:34:35.251Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:35.251Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 75. Response time: 9.
+[NX Daemon Server] - 2024-05-06T18:34:35.258Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:34:35.258Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:34:35.259Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-05-06T18:34:35.259Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-05-06T18:34:35.349Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:34:35.349Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-06T18:34:35.349Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:34:35.350Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:35.351Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:35.351Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.351Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.425Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:35.431Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6785829998552799ms
+[NX Daemon Server] - 2024-05-06T18:34:35.450Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:35.450Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 75. Response time: 25.
+[NX Daemon Server] - 2024-05-06T18:34:35.458Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:35.459Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:35.459Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.459Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.540Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:35.546Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6749169994145632ms
+[NX Daemon Server] - 2024-05-06T18:34:35.548Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:35.548Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 82. Response time: 8.
+[NX Daemon Server] - 2024-05-06T18:34:35.658Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:35.659Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:35.659Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.659Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.724Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:35.730Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.7019589999690652ms
+[NX Daemon Server] - 2024-05-06T18:34:35.733Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:35.733Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 67. Response time: 9.
+[NX Daemon Server] - 2024-05-06T18:34:35.741Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:34:35.742Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:34:35.742Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.742Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:34:35.805Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:34:35.811Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6133340001106262ms
+[NX Daemon Server] - 2024-05-06T18:34:35.813Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:34:35.813Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 64. Response time: 8.
+[NX Daemon Server] - 2024-05-06T18:35:03.012Z - [WATCHER]: src was deleted
+[NX Daemon Server] - 2024-05-06T18:35:03.012Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-05-06T18:35:03.115Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:35:03.115Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:03.115Z - [REQUEST]: src
+[NX Daemon Server] - 2024-05-06T18:35:03.179Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6833329992368817ms
+[NX Daemon Server] - 2024-05-06T18:35:04.016Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:35:04.018Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:35:04.018Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.018Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.095Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:35:04.102Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 1.5565839996561408ms
+[NX Daemon Server] - 2024-05-06T18:35:04.103Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:35:04.103Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 79. Response time: 8.
+[NX Daemon Server] - 2024-05-06T18:35:04.110Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:35:04.110Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-05-06T18:35:04.110Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-05-06T18:35:04.110Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-05-06T18:35:04.188Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:35:04.189Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-05-06T18:35:04.189Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-05-06T18:35:04.190Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:35:04.191Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:35:04.191Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.191Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.251Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:35:04.256Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6390420002862811ms
+[NX Daemon Server] - 2024-05-06T18:35:04.309Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:35:04.309Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 61. Response time: 58.
+[NX Daemon Server] - 2024-05-06T18:35:04.315Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:35:04.316Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:35:04.317Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.317Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.385Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:35:04.391Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.7187919998541474ms
+[NX Daemon Server] - 2024-05-06T18:35:04.394Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:35:04.394Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 70. Response time: 9.
+[NX Daemon Server] - 2024-05-06T18:35:04.501Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:35:04.503Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:35:04.503Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.503Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.576Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:35:04.582Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.6864579999819398ms
+[NX Daemon Server] - 2024-05-06T18:35:04.587Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:35:04.587Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 75. Response time: 11.
+[NX Daemon Server] - 2024-05-06T18:35:04.594Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-05-06T18:35:04.595Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-05-06T18:35:04.595Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.595Z - [REQUEST]: 
+[NX Daemon Server] - 2024-05-06T18:35:04.675Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+DaemonProjectGraphError: The Daemon Process threw an error while calculating the project graph. Convert this error to a ProjectGraphError to get more information.
+    at processFilesAndCreateAndSerializeProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:182:24)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getCachedSerializedProjectGraphPromise (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:46:16)
+    at async handleRequestProjectGraph (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+    at async handleResult (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:107:16)
+    at async handleMessage (/Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:78:9)
+    at async /Users/dwivabh/project/node/hms/node_modules/nx/src/daemon/server/server.js:45:9
+[NX Daemon Server] - 2024-05-06T18:35:04.681Z - Time taken for 'Load Nx Plugin: /Users/dwivabh/project/node/hms/node_modules/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json' 0.5871250005438924ms
+[NX Daemon Server] - 2024-05-06T18:35:04.685Z - Done responding to the client null
+[NX Daemon Server] - 2024-05-06T18:35:04.685Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 81. Response time: 10.
