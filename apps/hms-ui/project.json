@@ -1,0 +1,58 @@
+{
+  "name": "hms-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/hms-ui",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/hms-ui"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/hms-ui"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "hms-ui:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "hms-ui:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "hms-ui:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "hms-ui:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/hms-ui/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": []
+}
