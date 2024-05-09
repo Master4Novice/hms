@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@nx/next": "17.2.8",
-    "next": "13.4.4",
+    "next": "13.5.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tslib": "^2.3.0"
